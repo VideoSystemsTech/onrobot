@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="onrobot_rg6_gazebo" params="prefix">
+    <!--
+      Inject Gazebo ROS Control plugin, which allows us to use ros_control
+      controllers to control the virtual robot hw.
+    -->
+    <gazebo>
+        <plugin filename="libgazebo_ros_control.so" name="ros_control" />
+    </gazebo>
+  </xacro:macro>
+</robot>
